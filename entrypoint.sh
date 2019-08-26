@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/sh -e
 
 INTERVAL=${MIRROR_INTERVAL:-3600}
 DIRECTORY=${BASE_DIRECTORY:-/mirror}

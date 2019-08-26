@@ -1,10 +1,6 @@
-FROM debian:buster-slim
+FROM alpine:3.10
 
-RUN apt-get update \
-    && apt-get -y upgrade \
-    && apt-get --no-install-recommends install -y clamav python3-dnspython python3-urllib3 python3-certifi tini \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache py3-dnspython py3-urllib3 py3-certifi tini clamav
 
 COPY clamavmirror/__init__.py /bin/clamavmirror
 COPY entrypoint.sh /bin/entrypoint.sh
