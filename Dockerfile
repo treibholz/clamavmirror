@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.11.3
 
 RUN apk add --no-cache py3-dnspython py3-urllib3 py3-certifi tini clamav
 
